@@ -1,0 +1,37 @@
+<!--pages/user/user.wxml-->
+<view class='container'>
+  <view class='user'>
+    <view class='avatar'>
+      <image src='{{userInfo.avatar}}'></image>
+      <text>{{userInfo.name}}</text>
+    </view>
+    <view class="weui-cells weui-cells_after-title">
+      <view bindtap='saoYiSao' class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">扫一扫</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </view>
+      <navigator url="/pages/block/block" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">分组管理</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+      <navigator url="/pages/moduleup/moduleup" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">固件升级</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        <view class="weui-badge weui-badge_dot" style="margin-left: 5px;margin-right: 5px;"></view>
+      </navigator>
+      <navigator url="/pages/appup/appup" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">APP升级</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+       <view class="weui-badge weui-badge_dot" style="margin-left: 5px;margin-right: 5px;"></view>
+      </navigator>
+      <navigator url="/pages/trouble/trouble" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">常见问题</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+      <navigator url="/pages/call/call" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">联系我们</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+    </view>
+  </view>
+</view>

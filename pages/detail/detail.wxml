@@ -1,0 +1,34 @@
+<!--pages/detail/detail.wxml-->
+<view class='container'>
+<view class="myTab">  
+  <view class="myTab_nav">  
+    <view bindtap="tabFun" class="{{tabArr.curHdIndex=='0'? 'active' : ''}}" id='0' data-id="0">
+    <image wx:if="{{tabArr.curHdIndex=='0'}}" src='../../images/control_sel.png'></image>
+    <image wx:else="{{tabArr.curHdIndex=='0'}}" src='../../images/control_nor.png'></image>
+    <text>控制状态</text> 
+    </view>  
+    <view bindtap="tabFun" class="{{tabArr.curHdIndex=='1'? 'active' : ''}}"  id='1' data-id="1">
+    <image wx:if="{{tabArr.curHdIndex=='1'}}" src='../../images/status_sel.png'></image>
+    <image wx:else="{{tabArr.curHdIndex=='1'}}" src='../../images/status_nor.png'></image>
+    <text>统计查询</text>
+    </view>  
+    <view bindtap="tabFun" class="{{tabArr.curHdIndex=='2'? 'active' : ''}}"  id='2' data-id="2">
+    <image wx:if="{{tabArr.curHdIndex=='2'}}" src='../../images/error_sel.png'></image>
+    <image wx:else="{{tabArr.curHdIndex=='2'}}" src='../../images/error_nor.png'></image>
+    <text>故障查询</text>
+    </view>  
+  </view>  
+
+  <view class="myTab_page">  
+    <view class="{{tabArr.curBdIndex=='0'? 'active' : ''}}">
+    <detail-status/>
+    </view>  
+    <view class="{{tabArr.curBdIndex=='1'? 'active' : ''}}">
+    <detail-search/>
+    </view>  
+    <view class="{{tabArr.curBdIndex=='2'? 'active' : ''}}">
+    <detail-trouble/>
+    </view> 
+  </view>  
+</view>  
+</view>

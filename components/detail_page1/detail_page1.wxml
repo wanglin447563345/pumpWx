@@ -1,0 +1,30 @@
+<!--components/detail_page1/detail_page1.wxml-->
+<view class='detail_page1'>
+<view class='image'>
+<image src='../../images/main_bg.png'>
+</image>
+</view>
+<view class='switch_btn'>
+<text>手动/自动</text>
+<switch color='#4fa7e8' bindchange="switch2Change"/>
+</view>
+<view class='conts'>
+<view class='active'>
+<view>A泵</view>
+已启动
+</view>
+<view>
+<view>B泵</view>
+已停止
+</view>
+<view>
+<view>C泵</view>
+已停止
+</view>
+</view>
+<scroll-view>
+<view><text>电压</text><text>350V</text></view>
+<view><text>总电流</text><text>1A</text></view>
+<view><text>功率</text><text>300W</text></view>
+</scroll-view>
+</view>

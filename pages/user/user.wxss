@@ -1,0 +1,24 @@
+/* pages/user/user.wxss */
+.user{
+  width:100%;
+  }
+.avatar{
+  display: flex;
+  background: #00c5ef;
+  width:100%;
+  align-items: center;
+}
+.avatar image{
+  width:330rpx;
+  height: 330rpx;
+  padding:30rpx;
+}
+.avatar text{
+  color: #fff;
+  font-size: 24px;
+}
+.container button{
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+}

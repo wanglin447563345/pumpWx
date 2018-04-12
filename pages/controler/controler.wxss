@@ -1,0 +1,51 @@
+/* pages/controler/controler.wxss */
+page{
+  background: #efefef;
+}
+.controler>image{
+  width:100%;
+}
+.more{
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+}
+.controler scroll-view{
+  height: 610rpx;
+}
+.list_item{
+  display: flex;
+  justify-content: space-between;
+    padding:10px;
+  border-bottom: 1px solid #ddd;
+  background: #fff;
+}
+.list_item>view{
+  display: flex;
+  align-items: center;
+}
+
+.list_item>view view view{
+font-size: 24px;
+padding-left: 15px;
+margin-bottom: 8px;
+}
+.list_item>view view text{
+color: #666;
+padding-left: 20px;
+}
+.list_item image{
+  height: 161rpx;
+  width: 130rpx;
+}
+.list_item_right text{
+  background: #ff5722;
+  color: #fff;
+  padding:0 9px;
+  border-radius: 50%;
+}
+.list_item_right image{
+  width: 48px;
+  height: 51px;
+  margin-left: 10px;
+}

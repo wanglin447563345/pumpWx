@@ -1,0 +1,22 @@
+/* pages/start/start.wxss */
+.container{
+  background: #fff;
+  margin-top: 200rpx;
+  width: 100%;
+}
+.start{
+  width: 100%;
+  height: 400rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+}
+.start_info{
+  color: #999;
+}
+.start>button{
+  width: 90%;
+  color: #fff;
+  background: #4fa7e8;
+}

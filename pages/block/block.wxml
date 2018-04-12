@@ -1,0 +1,28 @@
+<!--pages/block/block.wxml-->
+<view class='team_center'>
+  <!-- 添加按钮 -->
+  <button bindtap='showDialogBtn' class="weui-btn">添加分组+</button>
+  <!-- 组列表 -->
+ <view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{items}}" wx:key="">
+  <view class="content">{{item.content}}</view>
+  <view class="del">
+  <text class='edit' catchtap="edit" data-index="{{index}}">编辑</text>
+  <text class='delete' catchtap="del" data-index="{{index}}">删除</text>
+  </view>
+ </view>
+
+  <!--弹窗-->
+  <view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+  <view class="modal-dialog" wx:if="{{showModal}}">
+    <view class="modal-title">分组名称</view>
+    <view class="modal-content">
+      <view class="modal-input">
+        <input placeholder-class="input-holder" type="text" bindinput="inputChange" class="input" placeholder="请输入名称" focus="{{inputFocus}}" catchtouchstart="listenerPhoneInput"></input>
+      </view>
+    </view>
+    <view class="modal-footer">
+      <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+      <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
+    </view>
+  </view>
+</view>

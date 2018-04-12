@@ -1,0 +1,26 @@
+/* components/detail_page3/detail_page3.wxss */
+.detail_page3{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  padding:0 15px;
+  text-align: center;
+}
+.title{
+  background: #fff;
+  line-height: 60px;
+  border-radius: 5px;
+}
+.content{
+  text-align: left;
+  background: #fff;
+  padding:15px;
+  border-radius: 5px;
+}
+.detail_page3 image{
+  width: 60rpx;
+  height: 86rpx;
+  margin-top:10px;
+}

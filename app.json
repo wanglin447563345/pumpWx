@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/start/start",
+    "pages/controler/controler",
+    "pages/user/user",
+    "pages/bind/bind",
+    "pages/block/block",
+    "pages/moduleup/moduleup",
+    "pages/appup/appup",
+    "pages/trouble/trouble",
+    "pages/call/call",
+    "pages/detail/detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#00c5ef",
+    "navigationBarTitleText": "登录",
+    "navigationBarTextStyle": "#fff",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": 100
+  },
+  "tabBar": {
+    "color": "#6e6d6b",
+    "selectedColor": "#4fa7e8",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "box-shadow": "0 0 6px 0",
+    "list": [
+      {
+        "pagePath": "pages/controler/controler",
+        "iconPath": "images/home_nor.png",
+        "selectedIconPath": "images/home_sel.png",
+        "text": "控制器"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "images/user_nor.png",
+        "selectedIconPath": "images/user_sel.png",
+        "text": "我"
+      }
+    ]
+  }
+}

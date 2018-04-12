@@ -1,0 +1,30 @@
+<!--pages/controler/controler.wxml-->
+<view class='controler'>
+<image src='../../images/main_bg.png'></image>
+<scroll-view scroll-y bindscrolltolower='getMore' lower-threshold='{{40}}'>
+<view class='list_item' wx:for="{{data}}" wx:key="{{item.index}}" id='{{item.name}}' bindtap='stepDetail'>
+<view>
+<image wx:if="{{item.status}}" src='../../images/device_online3.png'></image>
+<image wx:else="{{item.status}}" src='../../images/device_offline3.png'></image>
+<view wx:if="{{item.status}}">
+<view>{{item.name}}</view>
+<text>{{item.voltage}}</text><text>{{item.electric}}</text>
+</view>
+<view wx:else="{{item.status}}">
+<view>{{item.name}}</view>
+<text>离线</text>
+</view>
+</view>
+<view class='list_item_right'>
+<text wx:if="{{item.num}}">{{item.num}}</text>
+<image wx:if='{{item.aa}}' src='../../images/share_nor.png'></image>
+<image wx:else='{{item.aa}}' src='../../images/share_sel.png'></image>
+</view>
+</view>
+<view wx:if="{{nomore}}" class='more'>没有更多了</view>
+<view wx:else="{{nomore}}" class='more'>加载更多...</view>
+</scroll-view>
+
+</view>
+
+

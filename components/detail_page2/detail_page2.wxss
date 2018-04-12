@@ -1,0 +1,26 @@
+/* components/detail_page2/detail_page2.wxss */
+.detail_page2{
+  height: 100%;
+  width:100%;
+  overflow: auto;
+}
+.time_select{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 8px 0;
+  overflow: hidden;
+    background: #fff;
+}
+.picker{
+  padding:10px 20px;
+}
+.table{
+  background: #fff;
+  width:100%;
+  margin-bottom: 30px;
+}
+ec-canvas {
+  width: 100%;
+  margin-top:100px;
+}

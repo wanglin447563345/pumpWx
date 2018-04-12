@@ -1,0 +1,19 @@
+<!--pages/bind/bind.wxml-->
+<view class='bind'>
+<image  src='../../images/sign_in_bg.png'></image>
+</view>
+<form bindsubmit="formSubmit">
+  <view class="section">
+  <image wx:if="{{nameFocus}}" src='../../images/account_sel.png'></image>
+  <image wx:else="{{nameFocus}}" src='../../images/account_nor.png'></image>
+    <input focus='{{nameFocus}}' catchtouchstart="nameFocusFun" bindinput="nameInputChange"  name="user_name" placeholder="请输入用户名/邮箱" />
+  </view>
+   <view class="section">
+    <image wx:if="{{passwordFocus}}" src='../../images/password_sel.png'></image>
+   <image wx:else="{{passwordFocus}}" src='../../images/password_nor.png'></image>
+    <input focus='{{passwordFocus}}' catchtouchstart="passwordFocusFun" bindinput="passwordInputChange" name="password" placeholder="请输入密码" />
+  </view>
+  <view class="btn-area">
+    <button formType="submit">绑定</button>
+  </view>
+</form>

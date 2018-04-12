@@ -1,0 +1,8 @@
+<!--pages/start/start.wxml-->
+<view class='container'>
+<view class='start'>
+<view class='start_info'>是否绑定已有邮箱账号？</view>
+<button bindtap='bindStep'>绑定已有账号</button>
+<button bindtap='login'>直接登录</button>
+</view>
+</view>

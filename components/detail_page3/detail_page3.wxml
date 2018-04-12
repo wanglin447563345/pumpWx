@@ -1,0 +1,14 @@
+<!--components/detail_page3/detail_page3.wxml-->
+<view class='detail_page3'>
+<view class='title'>2号楼1#水泵发生故障</view>
+<view class='content'>
+<view>故障原因：水位溢出</view>
+<view>解决办法：水位溢出水位溢出水位溢出水位溢出水位溢出水位溢出水位溢出</view>
+</view>
+<view>
+<view>
+更多故障查询切换到统计查询页面
+</view>
+<image src='../../images/manual_input.png'></image>
+</view>
+</view>

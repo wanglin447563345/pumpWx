@@ -1,0 +1,27 @@
+/* pages/bind/bind.wxss */
+.bind>image{
+  width: 100%
+}
+.section{
+  padding:0 30px;
+  position: relative;
+}
+.section image{
+  position: absolute;
+  top:10px;
+  width: 48rpx;
+  height: 63rpx;
+}
+.section input{
+  height: 50px;
+  border-bottom: 1px solid #ddd;
+  padding-left: 40px;
+  margin-top: 10px;
+}
+.btn-area{
+  padding:50px;
+}
+.btn-area button{
+background: #ff7f3f;
+color: #fff;
+}
