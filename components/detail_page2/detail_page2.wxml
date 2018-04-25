@@ -1,21 +1,21 @@
 <!--components/detail_page2/detail_page2.wxml-->
 <view class='detail_page2'>
- <view class='time_select'>
-<view class='picker'>
-<picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
-    {{date}}
-</picker>
-</view>
-<view>--</view>
-<view class='picker'>
-<picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
-    {{date}}
-</picker>
-</view>
-</view> 
-<view class='table'>
-表哥
-</view>
-<ec-canvas id="mychart-dom-pie" canvas-id="mychart-pie" ec="{{ ec }}"></ec-canvas>
+  <view class='time_select'>
+    <view class='picker'>
+      <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+        {{date}}
+      </picker>
+    </view>
+    <view>--</view>
+    <view class='picker'>
+      <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+        {{date}}
+      </picker>
+    </view>
+  </view>
+  <view class='table'>
+    表哥
+  </view>
+  <ec-canvas id="mychart-dom-pie" canvas-id="mychart-pie" ec="{{ ec }}"></ec-canvas>
 
 </view>

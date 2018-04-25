@@ -2,7 +2,7 @@
 <view class='controler'>
 <image src='../../images/main_bg.png'></image>
 <scroll-view scroll-y bindscrolltolower='getMore' lower-threshold='{{40}}'>
-<view class='list_item' wx:for="{{data}}" wx:key="{{item.index}}" id='{{item.name}}' bindtap='stepDetail'>
+<view class='list_item' wx:for="{{data}}" wx:key="{{item.index}}" data-name='{{item.name}}' bindtap='stepDetail'>
 <view>
 <image wx:if="{{item.status}}" src='../../images/device_online3.png'></image>
 <image wx:else="{{item.status}}" src='../../images/device_offline3.png'></image>

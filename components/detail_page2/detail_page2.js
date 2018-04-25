@@ -17,16 +17,11 @@ function initChart(canvas, width, height) {
       trigger: 'item',
       formatter: "{a} <br/>{b}: {c} ({d}%)"
     },
-    legend: {
-      orient: 'vertical',
-      x: '60rpx',
-      data: ['北京', '武汉', '杭州', "广州"]
-    },  
     series: [{
       label: {
         normal: {
-          show: false,
-          position: 'center'
+          position: 'inner',
+          formatter: '{b}: {d}%'
         },
         labelLine: {
           normal: {
@@ -44,7 +39,7 @@ function initChart(canvas, width, height) {
         value: 20,
         name: '武汉'
       }, {
-        value: 10,
+        value: 1,
         name: '杭州'
       }, {
         value: 20,

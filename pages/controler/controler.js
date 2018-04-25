@@ -56,7 +56,7 @@ getMore(){
 // 查看详情
 stepDetail(e){
   wx.navigateTo({
-    url: `/pages/detail/detail?name=${e.target.id}`,
+    url: `/pages/detail/detail?name=${e.currentTarget.dataset.name}`,
   })
 },
   /**
