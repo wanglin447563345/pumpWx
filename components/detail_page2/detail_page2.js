@@ -1,5 +1,5 @@
 // components/detail_page2/detail_page2.js
-import * as echarts from '../../ec-canvas/echarts';
+import * as echarts from '../../ec-canvas/echarts.min.js';
 
 let chart = null;
 
@@ -30,7 +30,7 @@ function initChart(canvas, width, height) {
         }
       },
       type: 'pie',
-      center: ['180rpx', '150rpx'],
+      center: ['100px', '140px'],
       radius: "100rpx",
       data: [{
         value: 55,

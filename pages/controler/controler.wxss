@@ -11,7 +11,7 @@ page{
   font-size: 14px;
 }
 .controler scroll-view{
-  height: 610rpx;
+  height: 675rpx;
 }
 .list_item{
   display: flex;

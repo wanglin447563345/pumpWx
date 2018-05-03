@@ -1,7 +1,7 @@
 <!--pages/controler/controler.wxml-->
 <view class='controler'>
   <image src='../../images/main_bg.png'></image>
-  <scroll-view scroll-y bindscrolltolower='getMore' lower-threshold='{{40}}'>
+  <scroll-view scroll-y bindscrolltolower='getMore' lower-threshold='{{200}}'>
     <view wx:for="{{items}}" wx:key="{{item.index}}" data-name='{{item.name}}' bindtap='stepDetail' class="touch-item list_item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove">
       <view class='content'>
         <view>
