@@ -1,6 +1,6 @@
 <!--pages/bind/bind.wxml-->
 <view class='bind'>
-<image  src='../../images/sign_in_bg.png'></image>
+<image  src='../../images/sign_in_bg.jpg'></image>
 </view>
 <form bindsubmit="formSubmit">
   <view class="section">
