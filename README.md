@@ -9,6 +9,8 @@ weui小程序版<br>
 实现滑动编辑删除<br>
 模拟了组删除<br>
 # # # 页面：
+用小程序开发工具创建一个新项目，然后除了config全部替换掉就行了
+# # # 页面：
 ![](https://raw.githubusercontent.com/wanglin447563345/pumpWx/master/images/page1.png) 
 ![](https://raw.githubusercontent.com/wanglin447563345/pumpWx/master/images/page2png.png)
 ![](https://raw.githubusercontent.com/wanglin447563345/pumpWx/master/images/page3.png)
