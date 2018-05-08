@@ -24,11 +24,31 @@
         </view>
       </view>
       <view class="del">
+        <text class='edit' catchtap="edit" data-index="{{index}}">编辑</text>
+        <picker  class='group' catchtap="group" data-index="{{index}}" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      分组
+    </view>
+  </picker>
         <text class='delete' catchtap="del" data-index="{{index}}">删除</text>
       </view>
     </view>
     <view wx:if="{{nomore}}" class='more'>没有更多了</view>
     <view wx:else="{{nomore}}" class='more'>加载更多...</view>
   </scroll-view>
-
 </view>
+
+  <!--弹窗-->
+  <view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+  <view class="modal-dialog" wx:if="{{showModal}}">
+    <view class="modal-title">分组名称</view>
+    <view class="modal-content">
+      <view class="modal-input">
+        <input value="{{initValue}}" placeholder-class="input-holder" type="text" bindinput="inputChange" class="input" placeholder="请输入名称" focus="{{inputFocus}}" catchtouchstart="listenerPhoneInput"></input>
+      </view>
+    </view>
+    <view class="modal-footer">
+      <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+      <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
+    </view>
+  </view>

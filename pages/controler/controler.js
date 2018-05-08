@@ -5,9 +5,13 @@ Page({
    * 页面的初始数据
    */
   data: {
+    showModal: false,
+    inputFocus: true,
     nomore:false,
     startX: 0, //开始坐标
     startY: 0,
+    initValue:"",
+    array: ['组一', '组二', '组三', '组四'],
   items:[{
     status:1,
     name:'1号控制器',
@@ -44,15 +48,15 @@ Page({
   // 加载更多
 getMore(){
   const items=this.data.items;
-  items.push({
-    status: 1,
-    name: '4号控制器',
-    voltage: '220v',
-    electric: '2A',
-    aa: true,
-    isTouchMove: false //默认全隐藏删除
-  })
   if(items.length<10){
+    items.push({
+      status: 1,
+      name: '4号控制器',
+      voltage: '220v',
+      electric: '2A',
+      aa: true,
+      isTouchMove: false //默认全隐藏删除
+    })
     this.setData({ items })
   }else{
     this.setData({
@@ -164,6 +168,52 @@ stepDetail(e){
     //返回角度 /Math.atan()返回数字的反正切值
     return 360 * Math.atan(_Y / _X) / (2 * Math.PI);
   },
+  /*
+  * 隐藏模态对话框
+   */
+  hideModal: function () {
+    this.setData({
+      showModal: false
+    });
+  },
+  /*
+  * 弹窗
+   */
+  showDialogBtn: function () {
+    this.setData({
+      showModal: true
+    })
+  },
+  //分组
+  group: function (e) {
+    var that = this;
+    this.setData({
+      initValue: that.data.items[e.currentTarget.dataset.index].name
+    })
+  },
+  /**
+ * 对话框取消按钮点击事件
+ */
+  onCancel: function () {
+    this.hideModal();
+    this.setData({
+      initValue:''
+    })
+  },
+  /**
+   * 对话框确认按钮点击事件
+   */
+  onConfirm: function () {
+    this.hideModal();
+  },
+  //编辑事件
+  edit: function (e) {
+    var that = this;
+    this.setData({
+      showModal: true,
+      initValue: that.data.items[e.currentTarget.dataset.index].name
+    })
+  },
 
   //删除事件
   del: function (e) {
@@ -182,6 +232,17 @@ stepDetail(e){
       }
     })
 
+  },
+  istenerPhoneInput: function (e) {  // 用户名input  获得焦点。 可填写内容
+    this.setData({
+      inputFocus: true,
+    });
+  },
+  // 输入框改变时
+  inputChange: function (e) { 
+    this.setData({
+      initValue: e.detail.value,
+    });
   },
   /**
    * 用户点击右上角分享

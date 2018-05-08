@@ -3,13 +3,13 @@
   <!-- 添加按钮 -->
   <button bindtap='showDialogBtn' class="weui-btn">添加分组+</button>
   <!-- 组列表 -->
- <view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{items}}" wx:key="">
-  <view class="content">{{item.content}}</view>
-  <view class="del">
-  <text class='edit' catchtap="edit" data-index="{{index}}">编辑</text>
-  <text class='delete' catchtap="del" data-index="{{index}}">删除</text>
+  <view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{items}}" wx:key="">
+    <view class="content">{{item.content}}</view>
+    <view class="del">
+      <text class='edit' catchtap="edit" data-index="{{index}}">编辑</text>
+      <text class='delete' catchtap="del" data-index="{{index}}">删除</text>
+    </view>
   </view>
- </view>
 
   <!--弹窗-->
   <view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>

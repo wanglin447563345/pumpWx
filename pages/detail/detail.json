@@ -1,7 +1,7 @@
 {
   "usingComponents": {
     "detail-status": "../../components/detail_page1/detail_page1",
-    "detail-search": "../../components/detail_page2/detail_page2",
+    "ec-canvas": "../../ec-canvas/ec-canvas",
     "detail-trouble": "../../components/detail_page3/detail_page3"
   }
 }

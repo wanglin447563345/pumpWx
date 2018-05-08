@@ -1,4 +1,6 @@
-// pages/detail/detail.js
+var wxCharts = require('../../utils/wxcharts.js');
+var app = getApp();
+var pieChart = null;
 Page({
 
   /**
@@ -8,7 +10,20 @@ Page({
   tabArr:{
     curHdIndex:0,
     curBdIndex:0
-  }
+    }, 
+    date: '2018-04-07',
+    // ec: {
+    //   onInit: initChart
+    // },
+    listData: [
+      { "code": "01", "text": "text1", "type": "type1" },
+      { "code": "02", "text": "text2", "type": "type2" },
+      { "code": "03", "text": "text3", "type": "type3" },
+      { "code": "04", "text": "text4", "type": "type4" },
+      { "code": "05", "text": "text5", "type": "type5" },
+      { "code": "06", "text": "text6", "type": "type6" },
+      { "code": "07", "text": "text7", "type": "type7" }
+    ]
   },
   /**
    * 生命周期函数--监听页面加载
@@ -17,6 +32,53 @@ Page({
     wx.setNavigationBarTitle({
       title: options.name
     })
+    var windowWidth = 320;
+    try {
+      var res = wx.getSystemInfoSync();
+      windowWidth = res.windowWidth;
+    } catch (e) {
+      console.error('getSystemInfoSync failed!');
+    }
+
+    pieChart = new wxCharts({
+      animation: true,
+      canvasId: 'pieCanvas',
+      type: 'pie',
+      series: [{
+        name: '成交量1',
+        data: 15,
+      }, {
+        name: '成交量2',
+        data: 35,
+      }, {
+        name: '成交量3',
+        data: 78,
+      }, {
+        name: '成交量4',
+        data: 63,
+      }, {
+        name: '成交量2',
+        data: 35,
+      }, {
+        name: '成交量3',
+        data: 78,
+      }, {
+        name: '成交量4',
+        data: 63,
+      }, {
+        name: '成交量2',
+        data: 35,
+      }, {
+        name: '成交量3',
+        data: 78,
+      }, {
+        name: '成交量3',
+        data: 78,
+      }],
+      width: windowWidth,
+      height: 300,
+      dataLabel: true,
+    });
   },
 
   /**
@@ -80,4 +142,10 @@ Page({
       tabArr: _obj
     });
   },  
+  bindDateChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      date: e.detail.value
+    })
+  },
 })

@@ -15,27 +15,37 @@ Page({
   },
   //直接登录
   login() {
-    wx.login({
-      success: function (res) {
-        if (res.code) {
-          //发起网络请求
-           wx.switchTab({
-      url: '/pages/controler/controler'
-    })
-          // wx.request({
-          //   url: 'https://test.com/onLogin',
-          //   data: {
-          //     code: res.code
-          //   }
-          // })
-        } else {
-          console.log('登录失败！' + res.errMsg)
-        }
-      }
-    });
-    // wx.switchTab({
+    // wx.login({
+    //   success: function (res) {
+    //     if (res.code) {
+    //       //发起网络请求
+    //        wx.switchTab({
     //   url: '/pages/controler/controler'
     // })
+    //     } else {
+    //       console.log('登录失败！' + res.errMsg)
+    //     }
+    //   }
+    // });
+    wx.getUserInfo({
+      withCredentials:true,
+      lang:'zh_CN',
+      // timeout:3000,
+      success:function(res){
+        console.log(res,111)
+        wx.switchTab({
+      url: '/pages/controler/controler'
+    })
+      },
+      fail:function(err){
+        wx.showToast({
+          title: '允许授权才能登陆',
+          icon: 'none',
+          duration: 2000
+        })
+      }
+    })
+
   },
   /**
    * 生命周期函数--监听页面加载
